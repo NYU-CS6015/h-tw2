@@ -33,7 +33,7 @@ class HomeController extends Controller
         {
             $id = Auth::user()->id;
             $currentUser = User::find($id);
-            $messages = $currentUser->
+            $messages = $currentUser->messages;
             return view('show_message', ['messages'=>$messages]);
         }
     }

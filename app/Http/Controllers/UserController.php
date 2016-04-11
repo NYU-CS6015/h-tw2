@@ -8,11 +8,15 @@ use App\Http\Requests;
 
 use App\User;
 
+use Auth;
+
 class UserController extends Controller
 {
     //
-    public function index()
+    public function user()
     {
-    	return view('user');
+    	$id = Auth::user()->id;
+        $currentUser = User::find($id);
+    	return view('user', ['user' => $currentUser]);
     }
 }
