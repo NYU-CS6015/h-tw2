@@ -12,11 +12,11 @@ class Message extends Model
     ];
 
     public function user(){
-    	this->belongsTo('App\User');
+    	return $this->belongsTo('App\User');
     }
 
     public function location(){
-    	this->belongsTo('App\Location');
+    	return $this->belongsTo('App\Location');
     }
 
 }

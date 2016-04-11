@@ -8,11 +8,11 @@ class Location extends Model
 {
     //
     public function users(){
-    	this->hasMany('App\User');
+    	return $this->hasMany('App\User');
     }
 
     public function messages(){
-    	this->hasMany('App\Message');
+    	return $this->hasMany('App\Message');
     }
 
 }
