@@ -21,15 +21,19 @@
 
 <div class="container-fluid bg-1 text-center">
   <h3>Twitter</h3>
-  <h3>I'm an adventurer</h3>
+  <h3>See your messages</h3>
 </div>
-
-<div id="section">
-      @foreach($messages as $message)
-      <p>------------------- A new message -------------------------</p>
-      <p>Content:{{$message->content}}</p>
-      <br><br>
-     @endforeach
+<br><br>
+<div class="container-fluid bg-3 text-center">
+  <div id="section">
+        @foreach($messages as $message)
+        <p>User:{{$name}}</p>
+        <p>Content:{{$message->content}}</p>
+        <p>Location:{{ $message->location->value }}</p>
+        <p>Likes: {{ $message->likes}}</p>
+        <br><br>
+       @endforeach
+  </div>
 </div>
 
 
